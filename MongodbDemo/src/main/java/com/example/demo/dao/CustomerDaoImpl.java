@@ -116,15 +116,6 @@ public List<CustCarDetails> viewDetails(CustCarDetails details) throws CarWashEx
 	try{
 		if (dataExists) {
 			List<CustCarDetails> list=mongoTemplate.find(query, CustCarDetails.class);
-//			int count=list.size();
-//			System.out.println(count);
-//			if(count==1) {
-//				System.out.println("count entered");
-//				return mongoTemplate.findOne(query, CustCarDetails.class);
-//			}else {
-//				System.out.println("else count");
-//				throw new CarWashException("No Records Exist");
-//			}
 			return list;
 	}
 } catch (Exception e) {
